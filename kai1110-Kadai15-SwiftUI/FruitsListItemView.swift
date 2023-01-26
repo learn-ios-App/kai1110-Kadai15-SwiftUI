@@ -1,8 +1,8 @@
 
 import SwiftUI
 
-struct FruitsListView: View {
-    @State var fruit: FruitData
+struct FruitsListItemView: View {
+    @Binding var fruit: FruitData
     var body: some View {
         HStack {
             Button(action: {
@@ -19,9 +19,16 @@ struct FruitsListView: View {
     }
 }
 
+private struct Preview: View {
+    @State var fruit = FruitData(name: "apple", isCheck: false)
+
+    var body: some View {
+        FruitsListItemView(fruit: $fruit)
+    }
+}
+
 struct FruitsListView_Previews: PreviewProvider {
-    static var fruit = FruitData(name: "りんご", isCheck: false)
     static var previews: some View {
-        FruitsListView(fruit: fruit)
+        Preview()
     }
 }
