@@ -2,7 +2,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var Fruits: [FruitData] = [
+    //プロパティー名は先頭小文字
+    @State var fruits: [FruitData] = [
         FruitData(name: "リンゴ", isCheck: false),
         FruitData(name: "ミカン", isCheck: true),
         FruitData(name: "パイナップル", isCheck: false),
@@ -12,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List(Fruits) { fruit in
+            List($fruits) { fruit in
                 FruitsListView(fruit: fruit)
             }
             .listStyle(InsetListStyle())
@@ -29,7 +30,7 @@ struct ContentView: View {
         .sheet(isPresented: $isAddView) {
             AddFruitView(
                 save: { name in
-                    Fruits.append(FruitData(name: name, isCheck: false))
+                    fruits.append(FruitData(name: name, isCheck: false))
                     isAddView = false
                 },
                 cancel: {

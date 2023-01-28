@@ -2,7 +2,8 @@
 import SwiftUI
 
 struct FruitsListView: View {
-    @State var fruit: FruitData
+    @Binding var fruit: FruitData
+    @State var isEditView = false
     var body: some View {
         HStack {
             Button(action: {
@@ -15,13 +16,42 @@ struct FruitsListView: View {
                 )
             }
             Text(fruit.name)
+            Spacer()
+            Button(action: {
+                isEditView = true
+            }) {
+                Image(systemName: "i.circle")
+            }
+            .buttonStyle(BorderlessButtonStyle())
+        }
+        .sheet(isPresented: $isEditView) {
+            EditView(
+                text: fruit.name,
+                //編集内容を反映させて戻る
+                edit: { text in
+                    self.fruit.name = text
+                    isEditView = false
+                },
+                //編集内容を反映させずに戻る
+                cancel: {
+                    isEditView = false
+                }
+            )
         }
     }
 }
 
+//Bindingをつかった時にPreviewProviderを使うとうまく動作しない時は、PreView用の中間的なViewを作る。
+private struct Preview: View {
+    @State var friut = FruitData(name: "りんご", isCheck: false)
+    
+    var body: some View {
+        FruitsListView(fruit: $friut)
+    }
+}
+
 struct FruitsListView_Previews: PreviewProvider {
-    static var fruit = FruitData(name: "りんご", isCheck: false)
     static var previews: some View {
-        FruitsListView(fruit: fruit)
+        Preview()
     }
 }

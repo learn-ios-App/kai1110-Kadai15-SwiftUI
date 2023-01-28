@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3440AE29829608007CF338 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3440AD29829608007CF338 /* EditView.swift */; };
 		0B4B452E297EA5E000CF9D4E /* kai1110_Kadai15_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B452D297EA5E000CF9D4E /* kai1110_Kadai15_SwiftUIApp.swift */; };
 		0B4B4530297EA5E000CF9D4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B452F297EA5E000CF9D4E /* ContentView.swift */; };
 		0B4B4532297EA5E600CF9D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B4531297EA5E600CF9D4E /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3440AD29829608007CF338 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		0B4B452A297EA5E000CF9D4E /* kai1110-Kadai15-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kai1110-Kadai15-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4B452D297EA5E000CF9D4E /* kai1110_Kadai15_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kai1110_Kadai15_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0B4B452F297EA5E000CF9D4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		0B4B4521297EA5E000CF9D4E = {
 			isa = PBXGroup;
 			children = (
+				0B3440AD29829608007CF338 /* EditView.swift */,
 				0B4B452C297EA5E000CF9D4E /* kai1110-Kadai15-SwiftUI */,
 				0B4B452B297EA5E000CF9D4E /* Products */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				0BBED147297F939200570CFC /* AddFruitView.swift in Sources */,
 				0BCAB749297FEB85009BCBB3 /* FruitData.swift in Sources */,
+				0B3440AE29829608007CF338 /* EditView.swift in Sources */,
 				0B4B4530297EA5E000CF9D4E /* ContentView.swift in Sources */,
 				0B4B452E297EA5E000CF9D4E /* kai1110_Kadai15_SwiftUIApp.swift in Sources */,
 				0BCAB747297FE460009BCBB3 /* FruitsListView.swift in Sources */,
